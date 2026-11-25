@@ -1,0 +1,62 @@
+[pipeline]
+enabled = true
+max_queue = 5
+max_duration_seconds = 600
+max_download_bytes = 104857600
+stage_timeout_seconds = 900
+
+[netease]
+base_url = "http://127.0.0.1:13306"
+profile = "operator"
+
+[separation]
+vocals_model = "mel_band_roformer_vocals_becruily.ckpt"
+backing_model = "mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt"
+clean_model = "UVR-DeEcho-DeReverb.pth"
+
+[rift]
+checkpoint = ""
+speaker = ""
+backing_checkpoint = ""
+backing_speaker = ""
+key_shift = 0
+backing_key_shift = 0
+# Deliberately lock both voices to one song-wide octave: -12, 0 (automatic/default), or +12.
+song_octave_shift = 0
+infer_steps = 38
+ds_cfg_strength = 0.1
+spk_cfg_strength = 0.55
+cfg_rescale = 0.7
+batch_size = 1
+robust_f0 = 1
+adaptive_quality = true
+# Split at vocal pauses and share processing parameters by phrase cluster.
+timbre_slicing = true
+# The domain alignment and formant options below apply only with timbre_slicing enabled.
+# Align the RIFT input to the speaker's measured pitch domain when a reversible
+# worker-side virtual lift is available. Formant alignment can be enabled alone.
+domain_alignment = true
+domain_formants = true
+# Allow evidence-based octave changes in adaptive phrase processing. This is separate
+# from song_octave_shift, which applies one exact lock to both voices.
+allow_octave_jump = false
+# Opt in to CPU-only, QA-only singer-register comparisons on eligible automatic leads.
+# Preparing models is explicit: python scripts/manage.py prepare-octave-probe
+octave_probe = false
+# Acoustic labels that guide probe ordering; this does not identify a singer.
+octave_probe_target_voice = "unknown"
+# Optional speaker-specific MIDI percentiles [P10, median, P90].
+lead_pitch_range = []
+backing_pitch_range = []
+# Optional profile-speaker output. Configure independently for each role.
+lead_voice_profile = ""
+backing_voice_profile = ""
+
+[mix]
+lead_gain = 1.0
+backing_gain = 0.7
+
+[runtime]
+device = "auto"
+rift_source = ""
+rift_python = ""

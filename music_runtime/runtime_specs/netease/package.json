@@ -1,0 +1,9 @@
+{
+  "name": "nachobot-mus-library-netease-runtime",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Pinned loopback-only Netease API dependency for the mus_library plugin",
+  "dependencies": {
+    "NeteaseCloudMusicApi": "4.32.0"
+  }
+}

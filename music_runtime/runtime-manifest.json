@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "python": {
+    "version": "3.11.14",
+    "uv_version": "0.9.5"
+  },
+  "node": {
+    "version": "24.11.1",
+    "archive": "node-v24.11.1-win-x64.zip",
+    "url": "https://nodejs.org/dist/v24.11.1/node-v24.11.1-win-x64.zip",
+    "sha256": "5355ae6d7c49eddcfde7d34ac3486820600a831bf81dc3bdca5c8db6a9bb0e76",
+    "source": "https://nodejs.org/dist/v24.11.1/SHASUMS256.txt"
+  },
+  "netease_api": {
+    "name": "NeteaseCloudMusicApi",
+    "version": "4.32.0",
+    "registry": "https://registry.npmjs.org/",
+    "tarball": "https://registry.npmjs.org/NeteaseCloudMusicApi/-/NeteaseCloudMusicApi-4.32.0.tgz",
+    "integrity": "sha512-yRDwpMcLZnOSkmR/flEpGEJpufNxOQVILb2+2mnSrKPZp/3PbIo2uIOuTa3SjGaAtK3dUKJdQBTkOn0POKDa+A==",
+    "package_lock": "runtime_specs/netease/package-lock.json",
+    "bind_host": "127.0.0.1",
+    "port": 13306
+  },
+  "audio": {
+    "audio_separator": {
+      "version": "0.47.1",
+      "source": "https://github.com/nomadkaraoke/python-audio-separator",
+      "commit": "465b60f0271e880a7289a2c9aaeb13817c3b2bed"
+    },
+    "ffmpeg_package": {
+      "name": "imageio-ffmpeg",
+      "version": "0.6.0"
+    },
+    "locks": {
+      "cpu": "runtime_specs/audio_cpu/requirements.lock.txt",
+      "cuda": "runtime_specs/audio_cuda/requirements.lock.txt"
+    },
+    "model_data": {
+      "repository": "https://github.com/TRvlvr/application_data",
+      "commit": "3826b05b570dbd4fbedbc807758803b35348ba1b"
+    }
+  },
+  "rift": {
+    "repository": "https://github.com/Pur1zumu/RIFT-SVC.git",
+    "commit": "c03fa5940fb8edc32bd43be41eb2655fd8a93deb",
+    "lock": "runtime_specs/rift/uv.lock",
+    "asset_repository": "https://huggingface.co/Pur1zumu/RIFT-SVC-modules",
+    "asset_revision": "03c1662ba24a76fa3a653c33bc983ce6422620b4",
+    "assets": [
+      {
+        "path": "pretrained/content-vec-best/config.json",
+        "url": "https://huggingface.co/Pur1zumu/RIFT-SVC-modules/resolve/03c1662ba24a76fa3a653c33bc983ce6422620b4/content-vec-best/config.json",
+        "size_bytes": 1388,
+        "sha256": "2ddde063b795d38d9051a7215a092fecf4cfe148b54251e38de51d88d356898b"
+      },
+      {
+        "path": "pretrained/content-vec-best/pytorch_model.bin",
+        "url": "https://huggingface.co/Pur1zumu/RIFT-SVC-modules/resolve/03c1662ba24a76fa3a653c33bc983ce6422620b4/content-vec-best/pytorch_model.bin",
+        "size_bytes": 378342945,
+        "sha256": "d8dd400e054ddf4e6be75dab5a2549db748cc99e756a097c496c099f65a4854e"
+      },
+      {
+        "path": "pretrained/nsf_hifigan_44.1k_hop512_128bin_2024.02/config.json",
+        "url": "https://huggingface.co/Pur1zumu/RIFT-SVC-modules/resolve/03c1662ba24a76fa3a653c33bc983ce6422620b4/nsf_hifigan_44.1k_hop512_128bin_2024.02/config.json",
+        "size_bytes": 569,
+        "sha256": "3500d9a23b81d69b1204bcd699aea501c528c7d232e905afbbc39a3db6089220"
+      },
+      {
+        "path": "pretrained/nsf_hifigan_44.1k_hop512_128bin_2024.02/model.ckpt",
+        "url": "https://huggingface.co/Pur1zumu/RIFT-SVC-modules/resolve/03c1662ba24a76fa3a653c33bc983ce6422620b4/nsf_hifigan_44.1k_hop512_128bin_2024.02/model.ckpt",
+        "size_bytes": 56816642,
+        "sha256": "6512580252c2675b46d7d81845d33223c2450cc5d6590afd83f6e21319d47fe8"
+      },
+      {
+        "path": "pretrained/rmvpe/model.pt",
+        "url": "https://huggingface.co/Pur1zumu/RIFT-SVC-modules/resolve/03c1662ba24a76fa3a653c33bc983ce6422620b4/rmvpe/model.pt",
+        "size_bytes": 368492925,
+        "sha256": "19dc1809cf4cdb0a18db93441816bc327e14e5644b72eeaae5220560c6736fe2"
+      }
+    ]
+  },
+  "models": {
+    "mel_band_roformer_vocals_becruily.ckpt": {
+      "source_repository": "becruily/mel-band-roformer-vocals",
+      "source_revision": "af457f56e56eb23fa8322929eef6a63b455e5858",
+      "files": [
+        {
+          "name": "vr_model_data.json",
+          "url": "https://raw.githubusercontent.com/TRvlvr/application_data/3826b05b570dbd4fbedbc807758803b35348ba1b/vr_model_data/model_data_new.json",
+          "size_bytes": 4380,
+          "sha256": "6a2021b9aa355c10f845b68c73944d47bd9e1fdf37b8a584b14ce8f88b09bb2f"
+        },
+        {
+          "name": "mdx_model_data.json",
+          "url": "https://raw.githubusercontent.com/TRvlvr/application_data/3826b05b570dbd4fbedbc807758803b35348ba1b/mdx_model_data/model_data_new.json",
+          "size_bytes": 15358,
+          "sha256": "1aca8f9bcc57233bc714029663a9ec2345d9c7721f91e5e08f46392a879c6a9a"
+        },
+        {
+          "name": "mel_band_roformer_vocals_becruily.ckpt",
+          "url": "https://huggingface.co/becruily/mel-band-roformer-vocals/resolve/af457f56e56eb23fa8322929eef6a63b455e5858/mel_band_roformer_vocals_becruily.ckpt",
+          "size_bytes": 913107578,
+          "sha256": "a05961310cc55fbb901290c2e8be02682942f73522b6ac76bf2ec11e347ed95a"
+        },
+        {
+          "name": "config_mel_band_roformer_vocals_becruily.yaml",
+          "url": "https://github.com/nomadkaraoke/python-audio-separator/releases/download/model-configs/config_mel_band_roformer_vocals_becruily.yaml",
+          "size_bytes": 1723,
+          "sha256": "186792a36db251fc5834a883c519b609ca80abbd2bfc4668eea43ee3a4223985"
+        }
+      ]
+    },
+    "mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt": {
+      "source_repository": "shiromiya/audio-separation-models",
+      "source_revision": "5d52e7199fa6cc29732f532ddc9f9091143d8dc5",
+      "files": [
+        {
+          "name": "vr_model_data.json",
+          "url": "https://raw.githubusercontent.com/TRvlvr/application_data/3826b05b570dbd4fbedbc807758803b35348ba1b/vr_model_data/model_data_new.json",
+          "size_bytes": 4380,
+          "sha256": "6a2021b9aa355c10f845b68c73944d47bd9e1fdf37b8a584b14ce8f88b09bb2f"
+        },
+        {
+          "name": "mdx_model_data.json",
+          "url": "https://raw.githubusercontent.com/TRvlvr/application_data/3826b05b570dbd4fbedbc807758803b35348ba1b/mdx_model_data/model_data_new.json",
+          "size_bytes": 15358,
+          "sha256": "1aca8f9bcc57233bc714029663a9ec2345d9c7721f91e5e08f46392a879c6a9a"
+        },
+        {
+          "name": "mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt",
+          "url": "https://huggingface.co/shiromiya/audio-separation-models/resolve/5d52e7199fa6cc29732f532ddc9f9091143d8dc5/mel_band_roformer_karaoke_aufr33_viperx/mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt",
+          "size_bytes": 913096801,
+          "sha256": "1de20d459332fe8869aeb01327a31df0032262706e1365114e852dc271779813"
+        },
+        {
+          "name": "mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956_config.yaml",
+          "url": "https://github.com/nomadkaraoke/python-audio-separator/releases/download/model-configs/mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956_config.yaml",
+          "size_bytes": 1726,
+          "sha256": "b35077d94861f068097cce1a5e54633c055e7dcc2613eade4e4dc7c7c9c3f48b"
+        }
+      ]
+    },
+    "UVR-DeEcho-DeReverb.pth": {
+      "source_repository": "TRvlvr/model_repo",
+      "source_revision": "all_public_uvr_models",
+      "files": [
+        {
+          "name": "vr_model_data.json",
+          "url": "https://raw.githubusercontent.com/TRvlvr/application_data/3826b05b570dbd4fbedbc807758803b35348ba1b/vr_model_data/model_data_new.json",
+          "size_bytes": 4380,
+          "sha256": "6a2021b9aa355c10f845b68c73944d47bd9e1fdf37b8a584b14ce8f88b09bb2f"
+        },
+        {
+          "name": "mdx_model_data.json",
+          "url": "https://raw.githubusercontent.com/TRvlvr/application_data/3826b05b570dbd4fbedbc807758803b35348ba1b/mdx_model_data/model_data_new.json",
+          "size_bytes": 15358,
+          "sha256": "1aca8f9bcc57233bc714029663a9ec2345d9c7721f91e5e08f46392a879c6a9a"
+        },
+        {
+          "name": "UVR-DeEcho-DeReverb.pth",
+          "url": "https://github.com/TRvlvr/model_repo/releases/download/all_public_uvr_models/UVR-DeEcho-DeReverb.pth",
+          "size_bytes": 223650277,
+          "sha256": "e644028ec82865dc0fe082bc6fea85a43f7c71cfe375caee2da2d154aa661ee7",
+          "md5": "0fb9249ffe4ffc38d7b16243f394c0ff"
+        }
+      ]
+    }
+  }
+}
